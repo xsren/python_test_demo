@@ -11,4 +11,4 @@
 测试 Berkley DB 的插入和查询性能。 [具体文章](http://www.jianshu.com/p/6d02c1ac8c2b)。
 
 #### 4. test_mongo_batch_write
-测试 mongodb 批量写的性能。 [具体文章](http://www.jianshu.com/p/a9b96d840d37)。
+测试 mongodb 批量写和逐条写的性能对比。 [具体文章](http://www.jianshu.com/p/a9b96d840d37)。
