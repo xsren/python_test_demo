@@ -39,7 +39,7 @@ def send_to_socket_server():
 def recv(s):
     # 接收数据:
     while True:
-        # 每次最多接收1k字节:
+        # 每次最多接收1k字节,这里简化了过程，实际生产环境中会更复杂
         d = s.recv(1024)
         return d
 

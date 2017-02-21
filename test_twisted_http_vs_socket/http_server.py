@@ -5,7 +5,6 @@ from twisted.web import resource
 from twisted.internet import reactor
 
 class Test(resource.Resource):
-    isLeaf = True
     def render_POST(self, request):
         return "<html>Hello, world!</html>"
 
