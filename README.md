@@ -3,3 +3,12 @@
 
 #### 1. test_twisted_http_vs_socket
 测试向 twisted http server 和 twisted socket server 发送 1w条数据花费的时间。[具体文章](http://www.jianshu.com/p/333bb92c2c81)。
+
+#### 2. test_twisted_async_response
+测试 twisted server 如何异步返回 response。 [具体文章](http://www.jianshu.com/p/a6f9972fbdb1)。
+
+#### 3. test_bsddb_performance
+测试 Berkley DB 的插入和查询性能。 [具体文章](http://www.jianshu.com/p/6d02c1ac8c2b)。
+
+#### 4. test_mongo_batch_write
+测试 mongodb 批量写的性能。 [具体文章](http://www.jianshu.com/p/a9b96d840d37)。
