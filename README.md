@@ -12,3 +12,6 @@
 
 #### 4. test_mongo_batch_write
 测试 mongodb 批量写和逐条写的性能对比。 [具体文章](http://www.jianshu.com/p/a9b96d840d37)。
+
+#### 5. test_txmongo
+测试 txmongo 在 twisted web 中的使用
