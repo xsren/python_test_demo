@@ -15,3 +15,9 @@
 
 #### 5. test_txmongo
 测试 txmongo 在 twisted web 中的使用。  [具体文章](http://www.jianshu.com/p/edd85946eb6a)。
+
+#### 6. test_scrapy_splash
+测试 scrapy splash的基本使用。
+
+#### 7. test_scrapy_mw_exe_seq
+测试 scrapy 中间件的执行顺序。
