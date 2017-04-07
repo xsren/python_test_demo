@@ -47,31 +47,30 @@ DOWNLOAD_DELAY = 1
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-#2103
 
 SPIDER_MIDDLEWARES = {
-   'tutorial.middlewares.TutorialSpiderMiddleware0': 540,
+   'tutorial.middlewares.TutorialSpiderMiddleware': 540,
 }
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    # 'tutorial.middlewares.MyCustomDownloaderMiddleware': 543,
-   'tutorial.middlewares.TutorialSpiderMiddleware1': 541,
+   'tutorial.middlewares.TutorialDownloadMiddleware': 540,
 }
 
 # Enable or disable extensions
 # See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
 EXTENSIONS = {
-   'scrapy.extensions.telnet.TelnetConsole': None,
-   'tutorial.middlewares.TutorialSpiderMiddleware2': 542,
+   # 'scrapy.extensions.telnet.TelnetConsole': None,
+   'tutorial.middlewares.TutorialExtension': 540,
 }
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    # 'tutorial.pipelines.SomePipeline': 300,
-   'tutorial.middlewares.TutorialSpiderMiddleware3': 543,
+   'tutorial.middlewares.TutorialPIPELINES': 540,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -95,6 +94,6 @@ ITEM_PIPELINES = {
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-COOKIES_DEBUG = True
+# COOKIES_DEBUG = True
 
-DOWNLOAD_TIMEOUT = 2
+DOWNLOAD_TIMEOUT = 180

@@ -20,4 +20,4 @@
 测试 scrapy splash的基本使用。
 
 #### 7. test_scrapy_mw_exe_seq
-测试 scrapy 中间件的执行顺序。
+测试 scrapy 中间件的执行顺序。[具体文章](http://www.jianshu.com/p/2e9b660b8df9)。
