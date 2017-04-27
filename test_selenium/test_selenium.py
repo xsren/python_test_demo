@@ -133,6 +133,7 @@ def test_use_time():
     dcap["phantomjs.page.settings.loadImages"] = False
 
     driver = webdriver.PhantomJS(desired_capabilities=dcap)
+    driver.set_page_load_timeout(20)
     # from selenium.webdriver.chrome.options import Options
     # chrome_options = Options()
     # chrome_options.add_argument("--disable-extensions")
@@ -166,7 +167,7 @@ def test_use_time():
         t0 = time.time()
         driver.get(sites[i])
         # driver.get("https://www.zhihu.com")
-        WebDriverWait(driver, 3).until(EC.title_contains(u'知乎'))
+        # WebDriverWait(driver, 3).until(EC.title_contains(u'知乎'))
         print len(driver.page_source)
         with open('html_%s.html'%i,'w') as f:
             f.write(driver.page_source.encode('utf8'))
