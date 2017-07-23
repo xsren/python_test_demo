@@ -1,12 +1,12 @@
-#coding:utf8
+# coding:utf8
 from twisted.web.server import Site
 from twisted.web.resource import Resource
-from twisted.internet import defer,reactor
+from twisted.internet import defer, reactor
 import txmongo
 from twisted.web import xmlrpc
 
-class CrawlerServer(xmlrpc.XMLRPC):
 
+class CrawlerServer(xmlrpc.XMLRPC):
     allowNone = True
 
     def __init__(self):
@@ -16,14 +16,15 @@ class CrawlerServer(xmlrpc.XMLRPC):
         self.test = foo.test  # `test` collection
 
     @defer.inlineCallbacks
-    def xmlrpc_insert(self,doc):
+    def xmlrpc_insert(self, doc):
         result = yield self.test.insert(doc, safe=True)
         defer.returnValue(repr(result))
 
     @defer.inlineCallbacks
-    def xmlrpc_find(self,spec,limit=10):
+    def xmlrpc_find(self, spec, limit=10):
         result = yield self.test.find(spec, limit=limit)
         defer.returnValue(repr(result))
+
 
 if __name__ == '__main__':
     root = Resource()

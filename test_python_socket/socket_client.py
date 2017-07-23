@@ -7,6 +7,7 @@ import struct
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
+
 def send_msg(msg):
     msg1 = struct.pack('>I', len(msg)) + msg
     try:
@@ -14,7 +15,7 @@ def send_msg(msg):
     except Exception as e:
         print str(e)
 
-    
+
 def mysend(msg):
     totalsent = 0
     MSGLEN = len(msg)
@@ -29,6 +30,7 @@ def mysend(msg):
             raise RuntimeError("socket connection broken")
         totalsent = totalsent + sent
 
+
 def recv_msg():
     # Read message length and unpack it into an integer
     try:
@@ -40,7 +42,6 @@ def recv_msg():
         print str(e)
         return None
 
-    
     if not raw_msglen:
         print "not raw_msglen"
         return None
@@ -51,6 +52,7 @@ def recv_msg():
     except Exception as e:
         print str(e)
         return None
+
 
 def recvall(n):
     # Helper function to recv n bytes or return None if EOF is hit
@@ -68,7 +70,7 @@ def recvall(n):
 
 sock.connect(('120.77.54.165', 9999))
 
-for data in ['Michael'*1000, 'Tracy'*1000, 'Sarah'*1000]:
+for data in ['Michael' * 1000, 'Tracy' * 1000, 'Sarah' * 1000]:
     send_msg(data)
     # print recv_msg()
 sock.close()

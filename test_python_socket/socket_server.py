@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import  socket, threading
+import socket, threading
 import struct
+
 
 def tcplink(sock, addr):
     print 'Accept new connection from %s:%s...' % addr
@@ -11,20 +12,22 @@ def tcplink(sock, addr):
         print data
         if data is None:
             break
-        # send_msg(sock,'Hello, %s!' % data)
+            # send_msg(sock,'Hello, %s!' % data)
     sock.close()
     print 'Connection from %s:%s closed.' % addr
 
+
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-def send_msg(sock,msg):
+
+def send_msg(sock, msg):
     msg1 = struct.pack('>I', len(msg)) + msg
     try:
         mysend(msg1)
     except Exception as e:
         print str(e)
 
-    
+
 def mysend(msg):
     totalsent = 0
     MSGLEN = len(msg)
@@ -39,6 +42,7 @@ def mysend(msg):
             raise RuntimeError("socket connection broken")
         totalsent = totalsent + sent
 
+
 def recv_msg(sock):
     # Read message length and unpack it into an integer
     try:
@@ -50,7 +54,6 @@ def recv_msg(sock):
         print str(e)
         return None
 
-    
     if not raw_msglen:
         print "not raw_msglen"
         return None
@@ -61,6 +64,7 @@ def recv_msg(sock):
     except Exception as e:
         print str(e)
         return None
+
 
 def recvall(sock, n):
     # Helper function to recv n bytes or return None if EOF is hit
