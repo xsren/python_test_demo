@@ -1,0 +1,5 @@
+LOG_TIME \d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2},\d{3}
+FUNC_NAME \w+
+LINE_NUM \d+
+LOG_LEVEL \w+
+LOG_INFO \w+
